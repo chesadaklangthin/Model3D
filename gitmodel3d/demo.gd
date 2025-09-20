@@ -3,10 +3,10 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$hunkapong/AnimationPlayer.play("MeleeLib/Die1")
-	$hunkapong2/AnimationPlayer.play("MeleeLib/LightStrafeLwalk")
-	$hunkapong3/AnimationPlayer.play("MeleeLib/LightRunning")
-	$hunkapong4/AnimationPlayer.play("mixamo_com")
+	$hunkapong/AnimationPlayer.play("dance")
+	$hunkapong2/AnimationPlayer.play("walk")
+	$hunkapong3/AnimationPlayer.play("run")
+	$hunkapong4/AnimationPlayer.play("Die")
 	
 
 

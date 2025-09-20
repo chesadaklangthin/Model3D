@@ -1,6 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dxptvlwx0dtfd"]
-
-[ext_resource type="AnimationLibrary" uid="uid://d3h8qu2uqwwdf" path="res://assets/MeleeLib.res" id="1_a6gx1"]
+[gd_scene load_steps=11 format=4 uid="uid://dxptvlwx0dtfd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uuhql"]
 resource_name = "Material.008"
@@ -265,6 +263,7 @@ bind/37/pose = Transform3D(-0.00252443, -0.131437, -24.9602, -3.10133, -0.195775
 [sub_resource type="Animation" id="Animation_mqvcf"]
 resource_name = "mixamo_com"
 length = 13.7667
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -555,7 +554,7 @@ tracks/40/keys = PackedFloat32Array(0, 1, 0.0678265, 1.64553e-05, 0.00783506, 0.
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lc3g1"]
 _data = {
-&"mixamo_com": SubResource("Animation_mqvcf")
+&"dance": SubResource("Animation_mqvcf")
 }
 
 [node name="hunkapong" type="Node3D"]
@@ -629,21 +628,21 @@ bones/9/parent = 8
 bones/9/rest = Transform3D(0.998124, 0.0578515, 0.0200314, -0.0612214, 0.943184, 0.326583, -1.86265e-09, -0.327197, 0.944956, 1.10335e-10, 0.140638, 1.60956e-10)
 bones/9/enabled = true
 bones/9/position = Vector3(1.10335e-10, 0.140638, 1.60957e-10)
-bones/9/rotation = Quaternion(0.00221896, 0.00491274, 0.302587, 0.953107)
+bones/9/rotation = Quaternion(0.00221897, 0.00491275, 0.302587, 0.953107)
 bones/9/scale = Vector3(1, 1, 1)
 bones/10/name = "mixamorig_LeftHand"
 bones/10/parent = 9
 bones/10/rest = Transform3D(-0.0671444, 0.0307111, -0.99727, -0.372657, 0.926419, 0.0536195, 0.925537, 0.37524, -0.0507591, 5.59365e-10, 1.05853, 6.61621e-10)
 bones/10/enabled = true
 bones/10/position = Vector3(5.59365e-10, 1.05853, 6.61622e-10)
-bones/10/rotation = Quaternion(-0.0800136, 0.0756389, 0.141677, 0.98377)
+bones/10/rotation = Quaternion(-0.0800135, 0.0756389, 0.141677, 0.98377)
 bones/10/scale = Vector3(1, 1, 1)
 bones/11/name = "mixamorig_LeftHandThumb1"
 bones/11/parent = 10
 bones/11/rest = Transform3D(0.755354, -0.654852, 0.0246853, 0.655317, 0.754818, -0.0284536, -5.58794e-09, 0.0376692, 0.99929, -0.0774077, 0.0506874, 0.00335534)
 bones/11/enabled = true
 bones/11/position = Vector3(-0.0774077, 0.0506874, 0.00335534)
-bones/11/rotation = Quaternion(0.144718, 0.141314, -0.0826008, 0.97584)
+bones/11/rotation = Quaternion(0.144718, 0.141314, -0.0826009, 0.97584)
 bones/11/scale = Vector3(1, 1, 1)
 bones/12/name = "mixamorig_LeftHandThumb2"
 bones/12/parent = 11
@@ -713,7 +712,7 @@ bones/21/parent = 20
 bones/21/rest = Transform3D(1, -4.50185e-17, 2.99273e-17, 3.69472e-17, 0.9733, 0.229535, -3.94616e-17, -0.229535, 0.9733, 4.41087e-05, 0.0584032, 7.78377e-12)
 bones/21/enabled = true
 bones/21/position = Vector3(4.41087e-05, 0.0584032, 7.78385e-12)
-bones/21/rotation = Quaternion(0.0991771, 8.36176e-05, -0.0146894, 0.994961)
+bones/21/rotation = Quaternion(0.0991771, 8.36177e-05, -0.0146894, 0.994961)
 bones/21/scale = Vector3(1, 1, 1)
 bones/22/name = "mixamorig_LeftHandMiddle4"
 bones/22/parent = 21
@@ -911,6 +910,5 @@ skin = SubResource("Skin_55nuj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_lc3g1"),
-&"MeleeLib": ExtResource("1_a6gx1")
+&"": SubResource("AnimationLibrary_lc3g1")
 }

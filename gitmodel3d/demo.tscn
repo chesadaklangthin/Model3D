@@ -1,25 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmhtsu8csni8e"]
+[gd_scene load_steps=13 format=3 uid="uid://bmhtsu8csni8e"]
 
 [ext_resource type="Script" uid="uid://coscho1b2n2ss" path="res://demo.gd" id="1_0bhed"]
 [ext_resource type="PackedScene" uid="uid://dxptvlwx0dtfd" path="res://assets/hunkapong.tscn" id="1_5hfv0"]
+[ext_resource type="PackedScene" uid="uid://cln2h8cf6lkxl" path="res://assets/hunkapong2.tscn" id="3_m0rpm"]
+[ext_resource type="PackedScene" uid="uid://b3wgg6ny3siik" path="res://assets/hunkapong3.tscn" id="4_6bw2v"]
+[ext_resource type="PackedScene" uid="uid://djsrnfhpw6vs2" path="res://assets/hunkapong4.tscn" id="5_kem5a"]
+[ext_resource type="PackedScene" uid="uid://bjcwadnkpyjvw" path="res://toktang/Island.glb" id="6_n4w22"]
+[ext_resource type="PackedScene" uid="uid://chj0ufqeb1mva" path="res://toktang/CAR Model (1).glb" id="7_884kg"]
+[ext_resource type="PackedScene" uid="uid://c2esa5rw66uus" path="res://toktang/Tree.glb" id="8_d4o4o"]
+[ext_resource type="Texture2D" uid="uid://mpf3akb41txr" path="res://toktang/evening_road_01_puresky_4k.exr" id="9_884kg"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_d4o4o"]
+panorama = ExtResource("9_884kg")
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_gdsc3"]
+sky_material = SubResource("PanoramaSkyMaterial_d4o4o")
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_svejp"]
+background_mode = 2
+sky = SubResource("Sky_gdsc3")
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 115.631, 0, 341.856)
 script = ExtResource("1_0bhed")
 
 [node name="hunkapong" parent="." instance=ExtResource("1_5hfv0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8129, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0345, 12.8503, 14.1396)
 
-[node name="hunkapong2" parent="." instance=ExtResource("1_5hfv0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7112, 0, 0)
+[node name="hunkapong2" parent="." instance=ExtResource("3_m0rpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12209, 10.621, 8.81439)
 
-[node name="hunkapong3" parent="." instance=ExtResource("1_5hfv0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8532, 0, 0)
+[node name="hunkapong3" parent="." instance=ExtResource("4_6bw2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.086853, 10.621, 11.207)
 
-[node name="hunkapong4" parent="." instance=ExtResource("1_5hfv0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44261, 0, 0)
+[node name="hunkapong4" parent="." instance=ExtResource("5_kem5a")]
+transform = Transform3D(-0.67559, 0, 0.737277, 0, 1, 0, -0.737277, 0, -0.67559, -17.0353, 10.4246, 17.4188)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.959442, 0.281906, 0, -0.281906, 0.959442, -9.38786, 11.2053, 23.7193)
+transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436194, 0, 0.0436194, 0.999048, -10.5347, 14.2575, 31.3526)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.957279, -0.288168, -0.0240006, -0.195487, -0.706086, 0.680608, -0.213076, -0.64684, -0.732255, -9.06969, 33.9388, 3.8147e-06)
+transform = Transform3D(0.766996, -0.0633101, -0.638521, 0.638211, 0.178192, 0.748956, 0.0663626, -0.981957, 0.177077, -10.8448, 22.7199, 23.0161)
+
+[node name="Island" parent="." instance=ExtResource("6_n4w22")]
+transform = Transform3D(40.005, 0, 0, 0, 40.005, 0, 0, 0, 40.005, -11.2019, -19.4274, 7.54752)
+
+[node name="CAR Model (1)" parent="." instance=ExtResource("7_884kg")]
+transform = Transform3D(0.0123682, 2.74316e-05, -0.0157171, 0, 0.02, 3.49066e-05, 0.0157171, -2.15865e-05, 0.0123681, -12.3173, 10.5096, 15.2551)
+
+[node name="Tree" parent="." instance=ExtResource("8_d4o4o")]
+transform = Transform3D(5.81, 0, 0, 0, 5.81, 0, 0, 0, 5.81, -12.0414, 16.8871, -6.06509)
+
+[node name="Tree2" parent="." instance=ExtResource("8_d4o4o")]
+transform = Transform3D(5.81, 0, 0, 0, 5.81, 0, 0, 0, 5.81, -21.4747, 16.8871, 2.0899)
+
+[node name="Tree3" parent="." instance=ExtResource("8_d4o4o")]
+transform = Transform3D(5.81, 0, 0, 0, 5.81, 0, 0, 0, 5.81, -0.759613, 16.8871, 2.0899)
+
+[node name="Tree4" parent="." instance=ExtResource("8_d4o4o")]
+transform = Transform3D(5.81, 0, 0, 0, 5.81, 0, 0, 0, 5.81, -25.2392, 16.8871, 9.77917)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_svejp")
