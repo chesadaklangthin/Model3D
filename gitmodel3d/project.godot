@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="gitmodel3D"
+run/main_scene="uid://bmhtsu8csni8e"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
