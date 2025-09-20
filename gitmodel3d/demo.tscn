@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmhtsu8csni8e"]
+
+[ext_resource type="Script" uid="uid://coscho1b2n2ss" path="res://demo.gd" id="1_0bhed"]
+[ext_resource type="PackedScene" uid="uid://opii5wiqdt1g" path="res://assets/hunkapong.tscn" id="1_5hfv0"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_0bhed")
+
+[node name="hunkapong" parent="." instance=ExtResource("1_5hfv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.13573, 9.03099, 8.14695)
+
+[node name="hunkapong2" parent="." instance=ExtResource("1_5hfv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18795, 9.03099, 8.14695)
+
+[node name="hunkapong3" parent="." instance=ExtResource("1_5hfv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.26199, 9.03099, 8.14695)
+
+[node name="hunkapong4" parent="." instance=ExtResource("1_5hfv0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2489, 9.03099, 8.14695)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.959442, 0.281906, 0, -0.281906, 0.959442, -2.74987, 16.92, 26.9624)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.7113, 32.1926, 0)
